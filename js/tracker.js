@@ -108,11 +108,12 @@ function transformErasImages(eras) {
 
 async function fetchTrackerData(sheetId) {
     const endpoints = ['https://trackerapi-2.artistgrid.cx/get/', 'https://trackerapi-2.artistgrid.cx/get/'];
+    const corsProxy = "https://cors.keiran0.workers.dev?url=";
 
     let lastError = null;
     for (const baseUrl of endpoints) {
         try {
-            const response = await fetch(`${baseUrl}${sheetId}`);
+            const response = await fetch(`${corsProxy}${baseUrl}${sheetId}`);
             if (!response.ok) {
                 lastError = new Error(`HTTP ${response.status}`);
                 continue;

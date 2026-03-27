@@ -34,7 +34,7 @@ export async function onRequest(context) {
                     }
                 }
 
-                const imageUrl = profile.avatar_url || 'https://monochrome.tf/assets/appicon.png';
+                const imageUrl = profile.avatar_url || 'https://monochrome.thororen.com/assets/appicon.png';
                 const bannerUrl = profile.banner || '';
                 const pageUrl = new URL(request.url).href;
 

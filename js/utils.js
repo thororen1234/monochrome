@@ -624,8 +624,8 @@ export function getFullArtistString(track) {
         Array.isArray(track.artists) && track.artists.length > 0
             ? track.artists.map((a) => (typeof a === 'string' ? a : a.name) || '').filter(Boolean)
             : track.artist?.name
-              ? [track.artist.name]
-              : [];
+                ? [track.artist.name]
+                : [];
 
     // Parse featured artists from title, e.g. "Song (feat. A, B & C)" or "(with X & Y)"
     // Note: splitting on '&' may incorrectly fragment compound artist names like "Simon & Garfunkel".
